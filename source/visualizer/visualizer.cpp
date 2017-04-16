@@ -23,6 +23,7 @@ Visualizer::VisualizerInterface::~VisualizerInterface(void)
 void Visualizer::VisualizerInterface::DrawBox(const float x, const float y, const float width, const float height, const Color& color)
 {
 	Vertex triVertices[6];
+	
 	triVertices[0].x = x;         triVertices[0].y = y;          triVertices[0].z = 0.0f;
 	triVertices[1].x = x + width; triVertices[1].y = y;          triVertices[1].z = 0.0f;
 	triVertices[2].x = x + width; triVertices[2].y = y + height; triVertices[2].z = 0.0f;
