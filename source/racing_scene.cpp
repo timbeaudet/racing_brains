@@ -49,6 +49,7 @@ void RacingScene::OnRender(void) const
 
 	Visualizer::TurtleBrainsVisualizer tbVisual;
 	tbVisual.DrawBox(400.0f, 400.0f, 200.0f, 200.0f, 0xFF2E9FFF);
+	tbVisual.DrawBox(100.0f, 100.0f, 1080.0f, 100.0f, 0xFFFF9F2E);
 }
 
 //--------------------------------------------------------------------------------------------------------------------//
