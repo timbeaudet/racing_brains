@@ -28,7 +28,15 @@ namespace Visualizer
 		VisualizerInterface(void);
 		virtual ~VisualizerInterface(void);
 
+		///
+		/// @note This may or may not be how this is done, may even separate into a different object.
+		///
 		void DrawBox(const float x, const float y, const float width, const float height, const Color& color = 0xFFFFFFFF);
+
+		///
+		/// @note This may or may not be how this is done, may even separate into a different object.
+		///
+		void DrawLine(const float x1, const float y1, const float x2, const float y2, const Color& color = 0xFFFFFFFF);
 
 	protected:
 		///

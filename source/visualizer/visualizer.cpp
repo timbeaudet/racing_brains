@@ -23,7 +23,6 @@ Visualizer::VisualizerInterface::~VisualizerInterface(void)
 void Visualizer::VisualizerInterface::DrawBox(const float x, const float y, const float width, const float height, const Color& color)
 {
 	Vertex triVertices[6];
-	
 	triVertices[0].x = x;         triVertices[0].y = y;          triVertices[0].z = 0.0f;
 	triVertices[1].x = x + width; triVertices[1].y = y;          triVertices[1].z = 0.0f;
 	triVertices[2].x = x + width; triVertices[2].y = y + height; triVertices[2].z = 0.0f;
@@ -42,6 +41,16 @@ void Visualizer::VisualizerInterface::DrawBox(const float x, const float y, cons
 	lineVertices[6].x = x;         lineVertices[6].y = y + height; lineVertices[6].z = 0.0f;
 	lineVertices[7].x = x;         lineVertices[7].y = y;          lineVertices[7].z = 0.0f;
 	DrawLines(lineVertices, 8, color);
+}
+
+//--------------------------------------------------------------------------------------------------------------------//
+
+void Visualizer::VisualizerInterface::DrawLine(const float x1, const float y1, const float x2, const float y2, const Color& color)
+{
+	Vertex lineVertices[2];
+	lineVertices[0].x = x1;  lineVertices[0].y = y1;
+	lineVertices[1].x = x2;  lineVertices[1].y = y2;
+	DrawLines(lineVertices, 2, color);
 }
 
 //--------------------------------------------------------------------------------------------------------------------//
