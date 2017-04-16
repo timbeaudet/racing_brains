@@ -19,12 +19,17 @@ namespace Visualizer
 	///
 	struct Vertex { float x, y, z; };
 
+	///
+	/// @details Provides the interface required to render triangles and lines to keep the rendering details hidden.
+	///
 	class VisualizerInterface
 	{
 	public:
 		VisualizerInterface(void);
 		virtual ~VisualizerInterface(void);
-		
+
+		void DrawBox(const float x, const float y, const float width, const float height, const Color& color = 0xFFFFFFFF);
+
 	protected:
 		///
 		/// @details Called to draw some number of triangles by supplying the vertex of each triangle. The vertices will
@@ -34,7 +39,7 @@ namespace Visualizer
 		/// @param vertexCount  How many vertices in the array, should always be a factor of 3.
 		/// @param color        The desired output color, see VisualColor for more information on format.
 		///
-		virtual void DrawTriangles(const Vertex* vertices, const uint32_t& vertexCount, const Color& color);
+		virtual void DrawTriangles(const Vertex* vertices, const uint32_t& vertexCount, const Color& color) = 0;
 		
 		///
 		/// @details Called to draw some number of lines.
@@ -43,10 +48,13 @@ namespace Visualizer
 		/// @param vertexCount  How many vertices in the array, should always be a factor of 2.
 		/// @param color        The desired output color, see VisualColor for more information on format.
 		///
-		virtual void DrawLines(const Vertex* vertices, const uint32_t& vertexCount, const Color& color);
+		virtual void DrawLines(const Vertex* vertices, const uint32_t& vertexCount, const Color& color) = 0;
 	};
 
-	class NullVisualizer
+	///
+	/// @details A visualizer that does nothing, literally no visuals.
+	///
+	class NullVisualizer : public VisualizerInterface
 	{
 	public:
 		NullVisualizer(void);
@@ -55,7 +63,21 @@ namespace Visualizer
 		virtual void DrawTriangles(const Vertex* vertices, const uint32_t& vertexCount, const Color& color);
 		virtual void DrawLines(const Vertex* vertices, const uint32_t& vertexCount, const Color& color);
 	};
-	
+
+	///
+	/// @details A specific visualizer for TurtleBrains framework, note that although the visualizer takes in 3D vertex
+	///   information, TurtleBrains is specifically 2D so Z is completely ignored.
+	///
+	class TurtleBrainsVisualizer : public VisualizerInterface
+	{
+	public:
+		TurtleBrainsVisualizer(void);
+		~TurtleBrainsVisualizer(void);
+	protected:
+		virtual void DrawTriangles(const Vertex* vertices, const uint32_t& vertexCount, const Color& color);
+		virtual void DrawLines(const Vertex* vertices, const uint32_t& vertexCount, const Color& color);
+	};
+
 }; /* Visualizer */
 
-#endif _RacingBrains_Visualizer_
+#endif /* _RacingBrains_Visualizer_ */

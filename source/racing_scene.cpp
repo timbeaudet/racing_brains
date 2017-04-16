@@ -8,6 +8,8 @@
 #include "racing_scene.h"
 #include "scene_manager.h"
 
+#include "visualizer/visualizer.h"
+
 //--------------------------------------------------------------------------------------------------------------------//
 
 RacingScene::RacingScene(void)
@@ -44,6 +46,9 @@ void RacingScene::OnUpdate(const float deltaTime)
 void RacingScene::OnRender(void) const
 {
 	tbGame::GameScene::OnRender();
+
+	Visualizer::TurtleBrainsVisualizer tbVisual;
+	tbVisual.DrawBox(400.0f, 400.0f, 200.0f, 200.0f, 0xFF2E9FFF);
 }
 
 //--------------------------------------------------------------------------------------------------------------------//
