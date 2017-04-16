@@ -5,7 +5,7 @@ This is a spin-off project of Tim Beaudet's Artificial Intelligence in Racing Si
 1. Download/Install premake5 on your system.
 2. Download latest version of [TurtleBrains.](https://www.turtlebrains.com)
 3. Download latest version of Racing Brains.
-4. Add `build/turtle_brains_build.lua` with contents similar to: `return { path = "your/path/to/turtle_brains/" }`
+4. Add `build/turtle_brains_build.lua` with contents similar to: `return { path = "path/to/turtle_brains/" }`
 5. Run the script `make_project.bat` or `make_project.sh` depending on your system which will _(by default)_ create a Visual Studio or XCode project in the `build/system` directory. Open and edit freely.
 
 ### Additional Build Notes
