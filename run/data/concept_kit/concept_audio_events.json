@@ -1,0 +1,26 @@
+{
+    "audio_events": [
+        {
+            "name":"example_setting_event",
+            "file":"data/audio/silence.wav",
+            "volume":1.0,
+            "pitch":1.0
+        },
+        {
+            "name":"example_random_event",
+            "file":"data/audio/silence.wav",
+            "min_volume":0.8,
+            "max_volume":1.0,
+            "min_pitch":0.8,
+            "max_pitch":1.2
+        },
+        {
+            "name":"example_multi_event",
+            "file": [
+                { "name":"data/audio/silence.wav", "volume":0.7 },
+                { "name":"data/audio/silence.wav" },
+                { "name":"data/audio/silence.wav" }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{ "texture" : "data/concept_kit/concept_art_sheet.png",
+  "sprites" : [ 
+    { "name":"outline_circle", "x":0, "y":0, "width":64, "height":64 },
+    { "name":"solid_circle", "x":0, "y":64, "width":64, "height":64 },
+    { "name":"outline_square", "x":64, "y" : 0, "width":64, "height":64 },
+    { "name":"solid_square", "x":64, "y":64, "width":64, "height":64 },
+    { "name":"outline_triangle", "x":128, "y":0, "width":64, "height":64 },
+    { "name":"solid_triangle", "x":128,"y":64, "width":64, "height":64 },
+    { "name":"outline_star", "x":192, "y":0, "width":64, "height":64 },
+    { "name":"solid_star", "x":192, "y":64, "width":64, "height":64 },
+    { "name":"outline_heart", "x":256, "y":0, "width":64, "height":64 },
+    { "name":"solid_heart", "x":256, "y":64, "width":64, "height":64 },
+    { "name":"outline_bullet", "x":320, "y":0, "width":64, "height":64 },
+    { "name":"solid_bullet", "x":320, "y":64, "width":64, "height":64 },
+    { "name":"outline_coin", "x":0, "y":128, "width":64, "height":64 },
+    { "name":"solid_coin", "x":0, "y":192, "width":64, "height":64 },
+    { "name":"outline_box", "x":64, "y":128, "width":64, "height":64 },
+    { "name":"solid_box", "x":64, "y":192, "width":64, "height":64 },
+    { "name":"outline_pickup", "x":128, "y":128, "width":64, "height":64 },
+    { "name":"solid_pickup", "x":128, "y":192, "width":64, "height":64 },
+    { "name":"simple_car", "x":0, "y":256, "width":64, "height":128 },
+    { "name":"car_body", "x":64, "y":256, "width":64, "height":128 },
+    { "name":"car_windows", "x":128, "y":256, "width":64, "height":128 },
+    { "name":"tank_body", "x":0, "y":384, "width":64, "height":128 },
+    { "name":"tank_turret", "x":64, "y":384, "width":64, "height":128 }
+  ]
+}
+
