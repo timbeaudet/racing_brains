@@ -2,3 +2,8 @@ build/turtle_brains_build.lua
 build/macosx/
 build/windows/
 build/linux/
+run/debug_log.txt
+run/racing_brains
+run/racing_brains.exe
+run/racing_brains_debug
+run/racing_brains_debug.exe
