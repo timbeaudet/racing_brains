@@ -2,8 +2,6 @@
 /// @file
 /// @details The RacecarControllerInterface allows the driver to control any race cars using the same interface of
 ///   a steering wheel, throttle, brakes, clutch and other car controls.
-///
-/// <!-- Copyright (c) Tim Beaudet 2016 - All Rights Reserved --> 
 ///-----------------------------------------------------------------------------------------------------------------///
 
 #ifndef _RacingBrains_RacecarControllerInterface_h_
@@ -52,17 +50,17 @@ namespace Racing
 		virtual void OnApplyControls(void) const = 0;
 
 		//Analog Controls
-		inline void SetSteeringPosition(float steering) { mSteering = tbMath::Clamp(steering, -1.0f, 1.0f); }
-		inline void SetThrottlePosition(float throttle) { mThrottle = tbMath::Clamp(throttle, 0.0f, 1.0f); }
-		inline void SetBrakePosition(float brake) { mBrake = tbMath::Clamp(brake, 0.0f, 1.0f); }
-		inline void SetClutchPosition(float clutch) { mClutch = tbMath::Clamp(clutch, 0.0f, 1.0f); }
+		void SetSteeringPosition(float steering);
+		void SetThrottlePosition(float throttle);
+		void SetBrakePosition(float brake);
+		void SetClutchPosition(float clutch);
 
 		//Button Controls
-		inline void SetShiftUpButton(bool buttonPressed) { mShiftUp = buttonPressed; }
-		inline void SetShiftDownButton(bool buttonPressed) { mShiftDown = buttonPressed; }
+		void SetShiftUpButton(bool buttonPressed);
+		void SetShiftDownButton(bool buttonPressed);
 
 		//Shifter Controls
-		inline void SetShifterPosition(const ShifterPosition& shifterPosition) { mShifterPosition = shifterPosition; }
+		void SetShifterPosition(const ShifterPosition& shifterPosition);
 
 	private:
 		//Disabled copy constructor, assignment operator
