@@ -29,7 +29,7 @@ void Visualizer::VisualizerInterface::DrawBox(const float x, const float y, cons
 	triVertices[3].x = x + width; triVertices[3].y = y + height; triVertices[3].z = 0.0f;
 	triVertices[4].x = x;         triVertices[4].y = y + height; triVertices[4].z = 0.0f;
 	triVertices[5].x = x;         triVertices[5].y = y;          triVertices[5].z = 0.0f;
-	DrawTriangles(triVertices, 6, (color & 0x00FFFFFF) | 0x80FFFFFF);
+	DrawTriangles(triVertices, 6, (color & 0x00FFFFFF) | 0x88FFFFFF);
 
 	Vertex lineVertices[8];
 	lineVertices[0].x = x;         lineVertices[0].y = y;          lineVertices[0].z = 0.0f;
@@ -101,7 +101,7 @@ void Visualizer::TurtleBrainsVisualizer::DrawTriangles(const Vertex* vertices, c
 		tbVertices[index].y = vertices[index].y;
 		tbVertices[index].u = tbVertices[index].v = 0.0f;
 
-		tbVertices[index].abgr = tbGraphics::Color(0x882E9FFF).GetColorABGR();
+		tbVertices[index].abgr = tbGraphics::Color(color).GetColorABGR();
 	}
 
 	tbImplementation::Renderer::Render(tbImplementation::Renderer::kTriangles, tbVertices, vertexCount);
